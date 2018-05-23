@@ -69,3 +69,26 @@ Git也允许手动建立追踪关系。**
      > 当commit的内容相近时，可以在 commit 的时候使用 git commit --amend 来合并当前
     commit 到上一个 commit 里，可避免每次修改都有一个 commit, 也有助于他人 review 代码
     * 多余的 commit log 可以用 git rebase -i xxx 给 fixup 掉
+
+* 4.将创建的本地代码上传到Github上：
+   * 在Github上new一个repository；
+
+   * 进入本地的项目目录下，建立git仓库：
+
+         git init
+
+   * 将项目所有文件添加到仓库中：
+
+         git add .
+
+   * 将添加的文件提交到仓库：
+
+         git commit -m "文件描述"
+
+  * 将本地仓库关联到Github上：
+
+        git remote add origin url_of_your_newrepository
+
+  * 上传代码到Github远程仓库：
+
+        git push -u origin master
