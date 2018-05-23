@@ -53,16 +53,30 @@ Git也允许手动建立追踪关系。**
 
 
 * 3.git 团队协作
-    ##### 常用代码
+    ##### 合并常用代码
+
+
+      //从远程beta分支拉取最新代码，并和本地当前分支以rebase方式合并
       git pull --rebase upstream beta
-      git reset --hard 1e3xxx  //返回某个commit
+
+      //返回到某个commit版本
+      git reset --hard 1e3xxx  
+
+      // 添加upstream，让本地分支和远程建立起追踪关系
       git remote add upstream https://github.xxx
       （git rebase upstream beta）
-      git pull --rebase upstream beta---- rebase代码
-      手动解决下冲突
+
+
+      //手动解决下冲突, 继续进行rebase
       git add .
       git rebase --continue
       git push origin <your_dev>
+
+      //当代码混乱的时候，先用
+      git reset --hard commit版本号 恢复到之前版本
+      //再用一下命令合并
+      git pull --rebase upstream beta
+
 
    #### 减少分支commit
      * commit --amend
@@ -92,3 +106,33 @@ Git也允许手动建立追踪关系。**
   * 上传代码到Github远程仓库：
 
         git push -u origin master
+
+ * 5.命令的“联动模式”
+     > 当重复使用连续的几个命令时，可以使用“；”将多个命令写在一起
+
+       git add -A;git commit --amend --no-edit; git push origin beta -f;
+
+ * 6. merge和rebase
+
+   #### merger有两种格式：
+    * --no-ff指的是强行关闭fast-forward方式。
+
+    > fast-forward方式就是当条件允许的时候，git直接把HEAD指针指向合并分支的头，完成合并。属于“快进方式”，不过这种情况如果删除分支，则会丢失分支信息。因为在这个过程中没有创建commit
+
+    * git merge --squash
+    > 是用来把一些不必要commit进行压缩，比如说，你的feature在开发的时候写的commit很乱，那么我们合并的时候不希望把这些历史commit带过来，于是使用--squash进行合并，此时文件已经同合并后一样了，但不移动HEAD，不提交。需要进行一次额外的commit来“总结”一下，然后完成最终的合并。
+
+   >总结：
+  --no-ff：不使用fast-forward方式合并，保留分支的commit历史
+  --squash：使用squash方式合并，把多次分支commit历史压缩为一次
+
+     #### rebase和merge的区别 ([原文在这里](https://www.cnblogs.com/xueweihan/p/5743327.html))
+   * 采用merge和rebase后，git log的区别，merge命令不会保留merge的分支的commit：
+   * 处理冲突的方式：
+     > 使用merge命令合并分支，解决完冲突，执行git add .和git commit -m'fix conflict'。这个时候会产生一个commit。
+
+     > 使用rebase命令合并分支，解决完冲突，执行git add .和git rebase --continue，不会产生额外的commit。这样的好处是，‘干净’，分支上不会有无意义的解决分支的commit；坏处，如果合并的分支中存在多个commit，需要重复处理多次冲突。
+
+     #### 每次merge
+    * 每一次merge前确认代码要 merge 的时候，没什么修改的了，记得要 git pull   --rebase xxx xxx 一下，因为可能你之前别人又 merge  了新的代码
+    * 别人给了comit评论，自己修改完，push完之后，会自动对比生成新的changed files
