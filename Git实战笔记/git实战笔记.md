@@ -136,3 +136,7 @@ Git也允许手动建立追踪关系。**
      #### 每次merge
     * 每一次merge前确认代码要 merge 的时候，没什么修改的了，记得要 git pull   --rebase xxx xxx 一下，因为可能你之前别人又 merge  了新的代码
     * 别人给了comit评论，自己修改完，push完之后，会自动对比生成新的changed files
+
+## 7.其他小tips
+ * 克隆完记得git add remote upstream 网址
+ * git log 和git reset --hard commit版本号返回
