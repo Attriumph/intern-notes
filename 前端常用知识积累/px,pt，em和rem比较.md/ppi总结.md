@@ -1,4 +1,4 @@
-# pt，px，em和rem比较
+# px和pt，em和rem，dpi总结
 
 ## 1.pt与px
 pt(point)是印刷行业常用的单位，等于1/72英寸，表示绝对长度。
@@ -38,4 +38,5 @@ px和pt转换规则很简单，默认的显示设置中把文字定义为96DPI�
          <p style="font-size:2rem">我这里显示字体大小是32px(16px*2),因为我是根据html根元素的font-size大小进行计算的</p>
      </div>
  </body>
-*补充默认font-size大小是16px(如果html中没有设置的话)。
+
+**补充：默认font-size大小是16px(如果html中没有设置的话)。**
