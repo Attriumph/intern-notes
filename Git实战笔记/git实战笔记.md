@@ -136,7 +136,14 @@ Git也允许手动建立追踪关系。**
      #### 每次merge
     * 每一次merge前确认代码要 merge 的时候，没什么修改的了，记得要 git pull   --rebase xxx xxx 一下，因为可能你之前别人又 merge  了新的代码
     * 别人给了comit评论，自己修改完，push完之后，会自动对比生成新的changed files
+## 7.git提交pr和issue注意点
+1） 提的 pr 名字都统一叫：[NM]  主题XXX —— xxx nm 表示 no merge 的意思，名字统一这样关联 issue 的时候比较好看，知道这个 pr 做了什么，后面的
+   xxx 表示当前修改的什么场景，小程序、app、pc 端、移动端等
 
-## 7.其他小tips
+2） issue pr 写的内容一样的话，那开一个 issue 就没有意义了，要么都写在 issue 里，要么写在 pr 里，且写的内容最好简单明了。
+   简单列表一下具体修改什么了，如果有没完成的就用 checkbox 来写，如果都已经完成了，直接 - markdown 来写就可以了
+   记住一点就是，易读啊。写完之后 preview 的时候，能很直观的看到你修改的内容，再提 pr 或 issue
+
+## 8.其他小tips
  * 克隆完记得git add remote upstream 网址
  * git log 和git reset --hard commit版本号返回
