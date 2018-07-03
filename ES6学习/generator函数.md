@@ -1,14 +1,15 @@
 ##  generator 函数
 
-形式上，Generator 函数是一个普通函数，但是有两个特征。一是，function关键字与函数名之间有一个星号；二是，函数体内部使用yield表达式，定义不同的内部状态（yield在英语里的意思就是“产出”）。
+形式上，Generator 函数是一个普通函数，但是有两个特征。
+* 1.function关键字与函数名之间有一个星号
+* 2.函数体内部使用yield表达式，定义不同的内部状态
 
-    function* helloWorldGenerator() {
+      function* helloWorldGenerator() {
       yield 'hello';
       yield 'world';
       return 'ending';
-    }
-
-    var hw = helloWorldGenerator();
+      }
+      var hw = helloWorldGenerator();
 上面代码定义了一个 Generator 函数helloWorldGenerator，它内部有两个yield表达式（hello和world），即该函数有三个状态：hello，world 和 return 语句（结束执行）。
 
 然后，Generator 函数的调用方法与普通函数一样，也是在函数名后面加上一对圆括号。**不同的是，调用 Generator 函数后，该函数并不执行，返回的也不是函数运行结果，而是一个指向内部状态的指针对象，**
