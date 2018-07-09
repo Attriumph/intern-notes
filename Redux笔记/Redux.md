@@ -110,3 +110,9 @@ Store 允许使用store.subscribe方法设置监听函数，一旦 State 发生�
         let newState = store.getState();
         component.setState(newState);   
       }
+
+### 4. Provider组件
+provider功能主要为以下两点：
+
+* 在原应用组件上包裹一层，使原来整个应用成为Provider的子组件
+* 接收Redux的store作为props
