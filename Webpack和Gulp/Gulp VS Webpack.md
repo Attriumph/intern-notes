@@ -1,4 +1,4 @@
-## Gulf vs Webpack
+## Gulp vs Webpack
 
 gulp与webpack这两个构建工具功能上有重叠的地方，可单用，也可一起用，但本质的区别就没有那么清晰。
 
