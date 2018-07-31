@@ -147,3 +147,5 @@ Git也允许手动建立追踪关系。**
 ## 8.其他小tips
  * 克隆完记得git add remote upstream 网址
  * git log 和git reset --hard commit版本号返回
+ * 修改最后一次提交 $ git commit --amend
+ * 压缩多次commit提交 git rebase -i HEAD~4
