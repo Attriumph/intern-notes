@@ -14,22 +14,22 @@
 
 ### flex container 的6大属性
 
-* 1.flex-direction： 决定主轴的方向（即项目的排列方向）
+* 1. flex-direction： 决定主轴的方向（即项目的排列方向）
 
         flex-direction: row | row-reverse | column | column-reverse;
-* 2.flex-wrap： 定义如果一条轴线排不下，如何换行
+* 2. flex-wrap： 定义如果一条轴线排不下，如何换行
 
         flex-wrap: nowrap | wrap | wrap-reverse;
-* 3.flex-flow：是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap
+* 3. flex-flow：是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap
 
          flex-flow: <flex-direction> || <flex-wrap>;
-* 4.justify-content： 项目在主轴上的对齐方式。
+* 4. justify-content： 项目在主轴上的对齐方式。
 
         justify-content: flex-start | flex-end | center | space-between | space-around;
-* 5.align-items：项目在交叉轴上如何对齐。
+* 5. align-items：项目在交叉轴上如何对齐。
 
         align-items: flex-start | flex-end | center | baseline | stretch;
-* 6.align-content：多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用
+* 6. align-content：多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用
 
         align-content: flex-start | flex-end | center | space-between | space-around | stretch;
         // 备注
