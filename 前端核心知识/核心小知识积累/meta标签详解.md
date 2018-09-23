@@ -36,7 +36,7 @@ Example 4 - Setting the viewport to make your website look good on all devices:
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ## 4.重点理解http-equiv属性
 
-**HTTP服务器通过此属性收集HTTP协议的响应头报文
+**HTTP服务器通过此属性收集HTTP协议的响应报文（response message)）
 ，此属性的HTTP协议的响应头报文的值应使用content属性描述**
 
 http-equiv示例
