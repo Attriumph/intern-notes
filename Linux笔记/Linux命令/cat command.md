@@ -11,11 +11,11 @@ cat [选项] [文件]...
 
 cat主要有三大功能：
 
-  1> 一次显示整个文件:cat filename
+    1> 一次显示整个文件:cat filename
 
-  2> 从键盘创建一个文件:cat > filename 只能创建新文件,不能编辑已有文件.
+    2> 从键盘创建一个文件:cat > filename 只能创建新文件,不能编辑已有文件.
 
-  3> 将几个文件合并为一个文件:cat file1 file2 > file
+    3> 将几个文件合并为一个文件:cat file1 file2 > file
 
 3．命令参数：
 
