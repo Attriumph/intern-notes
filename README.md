@@ -9,4 +9,4 @@
 
 
 ## Learned and Used techs:
- *  React, Redux, Saga, Sass, WebPack, Gulp, Babel, Swiper, fullPage.js, HTML5, CSS3, ES6, Linux, Git/GitHub, npm
+ *  React, Redux, Saga, Sass, WebPack, Gulp, Babel, Swiper, fullPage.js, HTML5, CSS3, ES6, Linux, Git/GitHub, NPM
