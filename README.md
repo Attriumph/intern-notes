@@ -1,5 +1,5 @@
-# Intern-Notes
-## Summary of the internship(as a front-end engineer)
+# Intern Notes
+## Summary of the internship at Douban (as a front-end engineer)
 
 *	Tracked the project of Douban Rentals and responsible for its background Content Management System
 *	Found and Implemented new demands of the Content Management System, such as adding the page of Report Management, which allows managers to deal with reports of users and houses, and gives feedback to users
